@@ -1,0 +1,64 @@
+<html>  
+<head>  
+    <title>know.-Signup</title>   
+    <link rel = "stylesheet" type = "text/css" href = "css/login.css">   
+    <script>  
+        function validation()  
+        {  
+            var id=document.f2.id.value;  
+            var ps=document.f2.pd.value; 
+            var psc=document.f2.pdc.value; 
+            var email=document.f2.em.value;
+            var index;
+            index=email.search(/@/);
+            if(id.length=="" && ps.length=="") {  
+                alert("User Name and Password fields are empty");  
+                return false;  
+            }  
+            else if(id.length=="")
+            {  
+                alert("User Name is empty");  
+                return false;  
+            }   
+            else  if (ps.length=="") 
+            {  
+                alert("Password field is empty");  
+                return false;  
+            }  
+            else if (ps.length!=psc.length)
+            {
+            
+                    alert("The passwords do not match");
+                    return false;
+                
+            }
+            else{
+                if(index==-1||index==0)
+                {
+                    alert("Invalid email ID entered");
+                    return false;
+                }
+            }                            
+        }  
+    </script> 
+</head>
+<body>
+    <div id = "frm">  
+        <h1><center><span style="color: green;"><b>K</b>now</span><span class="dot">.</span> -Signup</h1> 
+        <img src="https://www.pngkit.com/png/detail/128-1280585_user-icon-fa-fa-user-circle.png" width="100px" height="100px"></center>
+        <form name="f2" action = "insert.php" onsubmit = "return validation()" method = "POST"> 
+        <br>
+        Full name:<input type="text" name="fn"><br><br>
+        Username: <input type="text" name="id"><br>
+         <br>
+        Email:&emsp;&ensp;<input type="text" name="em"><br>
+        <br>
+        Gender:<input type="radio">Female&nbsp<input type="radio">Male&nbsp<input type="radio">Others<br><br>
+        Password: <input type="text" name="pd"><br>
+        <br>
+        Retype Password:<input type="text" name="pdc"><br><br>
+        <center><input type="submit" id="btn" value="create"></center>
+        </form>    
+    </div>
+</body>
+</html>

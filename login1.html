@@ -1,0 +1,50 @@
+<html>  
+<head>  
+    <title>know.-login</title>   
+    <link rel = "stylesheet" type = "text/css" href = "css/login.css">   
+    <script>  
+        function validation()  
+        {  
+            var id=document.f1.user.value;  
+            var ps=document.f1.pass.value;  
+            if(id.length=="" && ps.length=="") {  
+                alert("User Name and Password fields are empty");  
+                return false;  
+            }  
+            else  
+            {  
+                if(id.length=="") {  
+                    alert("User Name is empty");  
+                    return false;  
+                }   
+                if (ps.length=="") {  
+                alert("Password field is empty");  
+                return false;  
+                }  
+            }                             
+        }  
+    </script>  
+</head>  
+<body>  
+    <div id = "frm">  
+        <h1><center><span style="color: green;"><b>K</b>now</span><span class="dot">.</span> -Login</h1>  
+        <img src="https://www.pngkit.com/png/detail/128-1280585_user-icon-fa-fa-user-circle.png" width="100px" height="100px"></center>
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label> UserName: </label>  
+                <input type = "text" id ="user" name  = "user" />  
+            </p>  
+            <p>  
+                <label> Password: </label>  
+                <input type = "password" id ="pass" name  = "pass" />  
+            </p>  
+            <p>     
+                <center><input type =  "submit" id = "btn" value = "Login" /> </center>
+                <br> 
+                Don't have an account?<a href="insert.html">Create account</a>
+            </p>  
+        </form>  
+    </div>  
+    
+</body>     
+</html> 

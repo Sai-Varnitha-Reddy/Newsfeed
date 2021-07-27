@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/home.css">
+  <title>Know. -Home</title>
+  <script src="js/jquery.js"></script>
+  <!--JAVASCRIPT FOR MAP-->
+  <script src="js/jquery-jvectormap.2.js"></script>
+  <!--JAVASCRIPT FOR MAP-->
+  <script src="js/jquery-jvectormap-world-mill.js"></script>
+  <!--JAVASCRIPT FOR MAP-->
+  <script src="js/script.js"></script>
+  <!--fontawesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/themap.css">
+    <link rel="stylesheet" href="css/jquery-jvectormap-2.0.3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway&display=swap">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.987.0" data-gr-ext-installed="">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand title" href="#"><span class="k">K</span>now<span class="dot">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="national.html">National</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="international.html">International</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="states.html" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              States
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="states.html#karnataka">Karnataka</a>
+              <a class="dropdown-item" href="states.html#telangana">Telangana</a>
+              <a class="dropdown-item" href="states.html#maharashtra">Maharashtra</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sports.html">Sports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="entertainment.html">Entertainment</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div id="mybutton">
+    <button class="feedback" onclick="window.location.href='feedback.html';">Feedback</button>
+  </div>
+  <div id="mybutton">
+    <a id="login" href="login1.html">Login</a>
+  </div>
+      <h2 class="headingw1">
+        <center><b>Map</b></center>
+      </h2>
+      <br>
+      <marquee>Select a country from the map to view their latest and trending news.</marquee>
+      <br>
+      <main>
+        <!--MAP-->
+        <div id="world-map-markers" style="width:100%; height:100%; position: absolute;">
+      <script>
+         $(function () {
+                $('#world-map-markers').vectorMap({
+                    map: 'world_mill',
+                    zoomOnScroll: true,
+                    zoomButtons: true,
+                    backgroundColor: 'white',/*background*/
+                    markerStyle: {
+                        initial: {
+                            fill: 'white',
+                            stroke: '#008d8d',
+                            "fill-opacity": 1,
+                            "stroke-width": 3,
+                            r: 8.5
+                        },
+                        hover: {
+                            fill: '#00b7b7',
+                            stroke: 'white',
+                            "stroke-width": 2,
+                            cursor: 'pointer'
+                        },
+                        selected: {
+                            fill: '#006666',/*circle fill*/
+                            "stroke-width": 3,
+                            r: 10,
+                            stroke: 'white',
+                        },
+                        selectedHover: {}
+                    },
+                    regionStyle: {
+                        initial: {
+                            fill: 'orange',/*map colour*/
+                            "fill-opacity": 1,
+                            stroke: 'none',
+                            "stroke-width": 0,
+                            "stroke-opacity": 1
+                        },
+                        hover: {
+                            "fill-opacity": 1,
+                            fill: ' #0d5a5a',/*map hover colour*/
+                            cursor: 'default'
+                        }
+                    },
+
+                    labels: {
+                        markers: {
+                            render: function (code) {
+                                if (code == '0') {
+                                    return "Thailand";
+                                }
+                                if (code == '1') {
+                                    return "Brazil";
+                                }
+                                if (code == '2') {
+                                    return "Italy";
+                                }
+                                if (code == '3') {
+                                    return "Russia";
+                                }
+                                if (code == '4') {
+                                    return "Cuba";
+                                }
+                                if (code == '5') {
+                                    return "Australia";
+                                }
+                                if (code == '6') {
+                                    return "Turkey";
+                                }
+                                if (code == '7') {
+                                    return "Argentina";
+                                }
+                                if (code == '8') {
+                                    return "Poland";
+                                }
+                                if (code == '9') {
+                                    return "Angola";
+                                }
+                                if (code == '10') {
+                                    return "Japan";
+                                }
+
+                            }
+                        }
+                    },
+                    markers: [
+                        { latLng: [13.75, 100.5] },/*Thailand*/
+                        { latLng: [-22.9, -43.17] },/*Brazil*/
+                        { latLng: [41.9, 12.49] },/*Italy*/
+                        { latLng: [55.75, 37.61] },/*Russia*/
+                        { latLng: [21.52, -77.78] },/*Cuba*/
+                        { latLng: [-33.86, 151.20] },/*Australia*/
+                        { latLng: [38.96, 35.24] },/*Turkey*/
+                        { latLng: [-34.60, -58.38] },/*Argentina*/
+                        { latLng: [52.23, 21.01] },/*Poland*/
+                        { latLng: [-8.81, 13.23] },/*Angola*/
+                        { latLng: [35.67, 139.65] }],/*Japan*/
+
+                    /*WHEN MARKER IS CLICKED, GO TO COUNTRY PAGE*/
+                    onMarkerClick: function (event, code) {
+                        if (code == '0') {
+                            $('#world-map-markers').on('click', function () {
+                                window.location = "countries/thailand.html";
+                            });
+
+                        } else if (code == '1') {
+                            $('#world-map-markers').on('click', function () {
+                                window.location = "countries/brazil.html";
+                            });
+
+                        } else if (code == '2') {
+                            $('#world-map-markers').on('click', function () {
+                                window.location = "countries/italy.html";
+                            });
+
+                        } else if (code == '3') {
+                            $('#world-map-markers').on('click', function () {
+                                window.location = "countries/russia.html";
+                            });
+
+                        } else if (code == '4') {
+                            $('#world-map-markers').on('click', function () {
+                                window.location = "countries/cuba.html";
+                            });
+
+                        } else if (code == '5') {
+                            $('#world-map-markers').on('click', function () {
+                                window.location = "countries/australia.html";
+                            });
+
+                        } else if (code == '6') {
+                            $('#world-map-markers').on('click', function () {
+                                window.location = "countries/turkey.html";
+                            });
+
+                        } else if (code == '7') {
+                            $('#world-map-markers').on('click', function () {
+                                window.location = "countries/argentina.html";
+                            });
+
+                        } else if (code == '8') {
+                            $('#world-map-markers').on('click', function () {
+                                window.location = "countries/poland.html";
+                            });
+
+                        } else if (code == '9') {
+                            $('#world-map-markers').on('click', function () {
+                                window.location = "countries/angola.html";
+                            });
+
+                        } else if (code == '10') {
+                            $('#world-map-markers').on('click', function () {
+                                window.location = "countries/japan.html";
+                            });
+
+                        } else {
+                            $("#markerSelected").text('');
+                        }
+                    }
+                });
+            });
+      </script>  
+    </main>
+    <div class="jvectormap-tip" style="left: 852px; top: 996px; display: none;">Russia</div>
+    <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;"></div>
+    <footer class=" f1 container-fluid bg-grey py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6 ">
+                <div class="logo-part">
+                  <p class="lead"><span class="know"><span class="k">K</span>now</span><span class="dot">.</span></p>
+                  <p>Help us improve our content by providing your valuable feedback.</p>
+                  <p>Email us to report about any article.</p>
+                </div>
+              </div>
+              <div class="col-md-6 px-4">
+                <h6> &nbsp About Company</h6>
+                <hr style="width:20%">
+                <a href="#" class="btn-footer"> More Info </a><br>
+                <a href="#" class="btn-footer"> Contact Us</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6 px-4">
+                <h6> Help us</h6>
+                <hr style="width:10%">
+                <div class="row ">
+                  <div class="col-md-6">
+                    <ul>
+                      <li> <a href="index.html"> Home</a> </li>
+                      <li> <a href="#"> About</a> </li>
+                      <li> <a href="#"> Service</a> </li>
+                      <li> <a href="#"> Team</a> </li>
+                      <li> <a href="#"> Help</a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 ">
+                <h6> Connect with us on Social Media</h6>
+                <hr style="width:40%">
+                <div class="social">
+                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </footer>
+  </body>
+  <umsdataelement id="UMSSendDataEventElement"></umsdataelement>
+  <div id="TAG_ID4TOOLBAR_UMS_GUID" style="display: none;">5800AB58-18F4-DE29-216F-BC8C2928B91C</div>
+  <div id="tmtoolbar_ums_injected" style="display: none;">init_ums</div>
+  </html>

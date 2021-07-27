@@ -1,0 +1,28 @@
+body{   
+    background-image: url("https://redpithemes.com/Documentation/assets/img/page_bg/page_bg_blur02.jpg");  
+    font-style: italic;
+}  
+#frm{  
+    border: solid midnightblue 4px;  
+    width:25%;  
+    border-radius: 2px;  
+    margin: 120px auto;  
+    background: white;  
+    padding: 20px;  
+}  
+#btn{  
+    color: #fff;  
+    background: midnightblue;  
+    padding: 7px;  
+    width: 150px;
+    align-items: center;
+    font-style: italic;
+    border-radius: 10px;
+} 
+img{
+  margin-left: 30%;
+}
+.dot{
+  color:red;
+  font-weight: bold;
+}

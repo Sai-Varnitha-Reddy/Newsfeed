@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/home.css">
+  <title>Know. -Feedback</title>
+  <!--fontawesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script>
+    function chkform(){
+      strValidate=myForm1.email.value.search(/@/);
+      strValidate1=myForm1.email.value.search(/.com/);
+      if(strValidate==-1){
+        alert("The email id is not valid. Please Re-enter.");
+        document.getElementById("emid").focus();
+        document.getElementById("emid").select();
+        return false;
+      }
+      else if(strValidate1==-1){
+        alert("The email id is not valid. Please Re-enter.");
+        document.getElementById("emid").focus();
+        document.getElementById("emid").select();
+        return false;
+      }
+      else{
+        var d=new Date();
+          var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+          var da=d.getDay();
+          var res=days[da];
+          alert("Thank you for your valuable feedback! Hope you have an amazing "+res+".");
+          return true;
+      }
+    }
+  </script>
+</head>
+
+<body>
+    <h2 class="headingw1">
+        <center><b>Feedback</b></center>
+      </h2>
+    <div class ="outer">
+            <form class="form-container feedform" action="index.html" name = "myForm1" onsubmit="return(chkform());">
+                <label for="name" class="lab"><b>Name</b></label>
+                <input type="text" placeholder="Enter Name" name="name" required>
+                <label for="email" class="lab"><b>Email</b></label>
+                <input type="text" id="emid" placeholder="Enter Email" name="email" required>
+                <label for="name" class="lab"><b>Initial Thoughts</b></label>
+                <input type="text" placeholder="Enter Thoughts" name="name" required>
+                <label for="name" class="lab"><b>Additional Comments</b></label>
+                <input type="text" placeholder="Enter Comments" name="name">
+                <button type="submit" class="btn" >Submit</button>
+            </form>  
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand title" href="#"><span class="k">K</span>now<span class="dot">.</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="national.html">National</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="international.html">International</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    States
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Karnataka</a>
+                    <a class="dropdown-item" href="#">Telangana</a>
+                    <a class="dropdown-item" href="#">Maharashtra</a>
+                  </div>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="sports.html">Sports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="entertainment.html">Entertainment</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+  <!--FOOTER-->
+  <footer class="container-fluid bg-grey py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6 ">
+              <div class="logo-part">
+                <p class="lead"><span class="know"><span class="k">K</span>now</span><span class="dot">.</span></p>
+                <p>Help us improve our content by providing your valuable feedback.</p>
+                <p>Email us to report about any article.</p>
+              </div>
+            </div>
+            <div class="col-md-6 px-4">
+              <h6> &nbsp About Company</h6>
+              <hr style="width:20%">
+              <a href="#" class="btn-footer"> More Info </a><br>
+              <a href="#" class="btn-footer"> Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6 px-4">
+              <h6> Help us</h6>
+              <hr style="width:10%">
+              <div class="row ">
+                <div class="col-md-6">
+                  <ul>
+                    <li> <a href="index.html"> Home</a> </li>
+                    <li> <a href="#"> About</a> </li>
+                    <li> <a href="#"> Service</a> </li>
+                    <li> <a href="#"> Team</a> </li>
+                    <li> <a href="#"> Help</a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 ">
+              <h6> Connect with us on Social Media</h6>
+              <hr style="width:40%">
+              <div class="social">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>
+</body>
+
+</html>
